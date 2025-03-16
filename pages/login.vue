@@ -11,7 +11,7 @@ const { login } = useLoginMutation();
 </script>
 
 <template>
-  <div class="min-h-dvh w-full flex items-center justify-center p-2">
+  <Container class="min-h-dvh w-full flex items-center justify-center py-2">
     <form
       class="flex flex-col gap-2 w-full max-w-md"
       @submit.prevent="login(user)"
@@ -40,5 +40,5 @@ const { login } = useLoginMutation();
         У меня нет аккаунта
       </NuxtLink>
     </form>
-  </div>
+  </Container>
 </template>

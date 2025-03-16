@@ -11,7 +11,7 @@ export default () => {
       queryCache.setQueryData(["user"], data.user);
       queryCache.setQueryData(["token"], data.token);
       localStorage.setItem("token", data.token);
-      navigateTo("/");
+      navigateTo({ name: "index" });
     },
   });
 

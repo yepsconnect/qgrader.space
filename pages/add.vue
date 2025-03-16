@@ -84,7 +84,7 @@ const { addNote } = useAddNoteMutation();
 </script>
 
 <template>
-  <div class="p-6 max-w-4xl mx-auto">
+  <Container class="p-6 max-w-4xl mx-auto">
     <h1 class="text-2xl font-bold mb-4">{{ t(`page.cupping.title`) }}</h1>
     <form class="space-y-4" @submit.prevent="addNote({ score, ...note })">
       <div class="grid md:grid-cols-2 gap-4">
@@ -225,5 +225,5 @@ const { addNote } = useAddNoteMutation();
         </button>
       </div>
     </form>
-  </div>
+  </Container>
 </template>
