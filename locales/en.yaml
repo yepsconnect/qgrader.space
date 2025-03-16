@@ -1,0 +1,35 @@
+label:
+  acidity: "Acidity"
+  aftertaste: "Aftertaste"
+  balance: "Balance"
+  body: "Body"
+  cleanCup: "Clean Cup"
+  fault: "Fault"
+  finalScore: "Final Score"
+  flavor: "Flavor"
+  fragrance: "Fragrance/Aroma"
+  roastLevel: "Roast Level"
+  sweetness: "Sweetness"
+  taint: "Taint"
+  uniformity: "Uniformity"
+  overall: "Overall"
+  name: "Name"
+  comment: "Comment"
+  date: "Date"
+  score: "Score"
+
+page:
+  cupping:
+    title: "SCA Cupping Form"
+    submit: "Save"
+
+description:
+  acidity: "Acidity is evaluated based on intensity and quality. It should be sweet and pleasant."
+  aftertaste: "Aftertaste, like flavor, is evaluated based on its cleanliness, duration, and complexity of descriptors. Ideally, the aftertaste should be no worse than the flavor."
+  balance: "Balance is evaluated based on the overall impression of the coffee's harmony and complexity. For example, you should ensure that the coffee doesn’t have too much bitterness or acidity."
+  body: "Body is evaluated based on density and quality. It should leave a pleasant tactile feeling in the mouth."
+  fault: "Faults are unpleasant flavors in the cup. For example, earthy, moldy, grassy, woody, chemical, and other defects."
+  flavor: "Flavor is evaluated based on richness and balance. Good coffee should have pronounced descriptors without harsh or unpleasant notes."
+  fragrance: "Flavor and aroma are evaluated based on the purity and complexity of descriptors — those that can be detected in the coffee. They can be fruity, floral, herbal, spicy, nutty, and other types."
+  taint: "Taint refers to minor defects in flavor that lower the overall score but do not make the coffee undrinkable."
+  overall: "Overall impression is evaluated based on all the parameters: how the coffee looks, smells, and feels. It's important to consider all aspects to assess the coffee's overall quality."
