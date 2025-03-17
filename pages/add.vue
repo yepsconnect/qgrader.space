@@ -84,8 +84,8 @@ const { addNote } = useAddNoteMutation();
 </script>
 
 <template>
-  <Container class="p-6 max-w-4xl mx-auto">
-    <h1 class="text-2xl font-bold mb-4">{{ t(`page.add.title`) }}</h1>
+  <Container class="py-2 max-w-4xl mx-auto">
+    <h1 class="text-2xl font-semibold">{{ t(`page.add.title`) }}</h1>
     <form class="space-y-4" @submit.prevent="addNote({ score, ...note })">
       <div class="grid md:grid-cols-2 gap-4">
         <fieldset class="fieldset">

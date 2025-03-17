@@ -11,7 +11,7 @@ const { deleteNote } = useDeleteNoteMutation();
 <template>
   <Container class="py-2 flex flex-col gap-2">
     <div class="flex items-center justify-between">
-      <h1 class="text-2xl font-bold">
+      <h1 class="text-2xl font-semibold">
         {{ t("page.cupping.title") }}
       </h1>
       <NuxtLink :to="{ name: 'add' }" class="btn btn-primary">

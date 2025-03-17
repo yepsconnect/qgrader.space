@@ -7,8 +7,10 @@ definePageMeta({ middleware: "auth" });
 
 <template>
   <Container class="py-2 flex flex-col gap-2">
-    <h1>{{ t("page.dashboard.title") }}</h1>
-    <ul class="menu w-full">
+    <h1 class="text-2xl font-semibold">
+      {{ t("page.dashboard.title") }}
+    </h1>
+    <ul class="menu menu-lg w-full">
       <li>
         <NuxtLink :to="{ name: 'cupping' }">
           {{ t("page.cupping.title") }}
