@@ -17,11 +17,30 @@ label:
   comment: "Комментарий"
   date: "Дата"
   score: "Балл"
+  add: "Добавить"
+  logout: "Выйти"
 
 page:
-  cupping:
+  add:
     title: "Форма оценки по методике SCA"
     submit: "Оценить"
+  cupping:
+    title: "Мои оценки"
+    empty: "Нет оценок"
+  dashboard:
+    title: "Панель управления"
+  login:
+    title: "Авторизация"
+    submit: "Войти"
+    reset: "У меня нет аккаунта"
+  register:
+    title: "Регистрация"
+    submit: "Зарегистрироваться"
+    reset: "У меня уже есть аккаунт"
+  home:
+    title: "qgrader.space"
+  settings:
+    title: "Настройки"
 
 description:
   acidity: "Кислотность оценивают по интенсивности и качеству. Она должна быть сладкой и приятной."

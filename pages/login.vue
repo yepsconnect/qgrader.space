@@ -1,5 +1,7 @@
 <script setup lang="ts">
-useHead({ title: "Авторизация" });
+const { t } = useI18n();
+
+useHead({ title: t("page.login.title") });
 definePageMeta({ middleware: "unauth" });
 
 const user = reactive({
@@ -7,7 +9,7 @@ const user = reactive({
   password: "",
 });
 
-const { login } = useLoginMutation();
+const { login, isLoading } = useLoginMutation();
 </script>
 
 <template>
@@ -16,14 +18,14 @@ const { login } = useLoginMutation();
       class="flex flex-col gap-2 w-full max-w-md"
       @submit.prevent="login(user)"
     >
-      <h1>Авторизация</h1>
+      <h1>{{ t("page.login.title") }}</h1>
       <input
         v-model="user.email"
         type="email"
         name="email"
         required
         autocomplte="email"
-        class="input input-bordered w-full"
+        class="input input-lg input-bordered w-full"
         placeholder="example@mail.ru"
       />
       <input
@@ -32,12 +34,17 @@ const { login } = useLoginMutation();
         name="password"
         required
         autocomplete="current-password"
-        class="input input-bordered w-full"
+        class="input input-lg input-bordered w-full"
         placeholder="******"
       />
-      <button type="submit" class="btn btn-primary">Войти</button>
+      <button type="submit" class="btn btn-primary" :disabled="isLoading">
+        <span v-if="isLoading" class="loading"></span>
+        <template v-else>
+          {{ t("page.login.submit") }}
+        </template>
+      </button>
       <NuxtLink :to="{ name: 'register' }" class="btn btn-primary btn-outline">
-        У меня нет аккаунта
+        {{ t("page.login.reset") }}
       </NuxtLink>
     </form>
   </Container>

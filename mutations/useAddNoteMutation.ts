@@ -11,8 +11,8 @@ export default () => {
       });
     },
     onSuccess: () => {
-      navigateTo({ name: "cupping" });
       queryCache.invalidateQueries({ key: ["notes"] });
+      navigateTo({ name: "cupping" });
     },
   });
 

@@ -1,13 +1,13 @@
+<script setup lang="ts">
+const { t } = useI18n();
+
+useHead({ title: t("page.home.title") });
+</script>
+
 <template>
-  <Container class="py-2 flex flex-col gap-2">
-    <h1>Меню</h1>
-    <ul class="menu w-full">
-      <li>
-        <NuxtLink :to="{ name: 'cupping' }">Капинг</NuxtLink>
-      </li>
-      <li>
-        <NuxtLink :to="{ name: 'settings' }">Настройки</NuxtLink>
-      </li>
-    </ul>
+  <Container class="min-h-dvh flex items-center justify-center w-full py-2">
+    <h1 class="w-full text-center text-[10vw] font-bold">
+      {{ t("page.home.title") }}
+    </h1>
   </Container>
 </template>

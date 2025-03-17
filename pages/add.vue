@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-useHead({ title: "Новая запись" });
+useHead({ title: t("page.add.title") });
 definePageMeta({ middleware: "auth" });
 
 const note = reactive<Note>({
@@ -85,7 +85,7 @@ const { addNote } = useAddNoteMutation();
 
 <template>
   <Container class="p-6 max-w-4xl mx-auto">
-    <h1 class="text-2xl font-bold mb-4">{{ t(`page.cupping.title`) }}</h1>
+    <h1 class="text-2xl font-bold mb-4">{{ t(`page.add.title`) }}</h1>
     <form class="space-y-4" @submit.prevent="addNote({ score, ...note })">
       <div class="grid md:grid-cols-2 gap-4">
         <fieldset class="fieldset">
@@ -95,7 +95,7 @@ const { addNote } = useAddNoteMutation();
           <input
             v-model="note.date"
             type="date"
-            class="input input-bordered w-full"
+            class="input input-lg input-bordered w-full"
           />
         </fieldset>
         <fieldset class="fieldset">
@@ -105,7 +105,7 @@ const { addNote } = useAddNoteMutation();
           <input
             v-model="note.name"
             type="text"
-            class="input input-bordered w-full"
+            class="input input-lg input-bordered w-full"
           />
         </fieldset>
       </div>
@@ -115,7 +115,7 @@ const { addNote } = useAddNoteMutation();
         </legend>
         <textarea
           v-model="note.comment"
-          class="textarea textarea-bordered w-full"
+          class="textarea textarea-lg textarea-bordered w-full"
         />
       </fieldset>
 
@@ -208,8 +208,6 @@ const { addNote } = useAddNoteMutation();
           </p>
         </fieldset>
       </div>
-
-      <!-- Final Score -->
       <div
         role="alert"
         class="alert alert-secondary alert-soft flex justify-center"
@@ -220,8 +218,8 @@ const { addNote } = useAddNoteMutation();
         </span>
       </div>
       <div class="sticky bottom-2">
-        <button type="submit" class="btn btn-neutral w-full">
-          {{ t(`page.cupping.submit`) }}
+        <button type="submit" class="btn btn-primary w-full">
+          {{ t(`page.add.submit`) }}
         </button>
       </div>
     </form>

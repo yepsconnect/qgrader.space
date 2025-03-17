@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-useHead({ title: t("Мои оценки") });
+useHead({ title: t("page.cupping.title") });
 definePageMeta({ middleware: "auth" });
 
 const { notes } = useNotesQuery();
@@ -11,8 +11,12 @@ const { deleteNote } = useDeleteNoteMutation();
 <template>
   <Container class="py-2 flex flex-col gap-2">
     <div class="flex items-center justify-between">
-      <h1 class="text-2xl font-bold">Мои заметки</h1>
-      <NuxtLink :to="{ name: 'add' }" class="btn btn-link"> Добавить </NuxtLink>
+      <h1 class="text-2xl font-bold">
+        {{ t("page.cupping.title") }}
+      </h1>
+      <NuxtLink :to="{ name: 'add' }" class="btn btn-primary">
+        {{ t("label.add") }}
+      </NuxtLink>
     </div>
     <div class="flex flex-col gap-2">
       <div v-for="note in notes" :key="note._id" class="p-3 shadow rounded">
@@ -36,6 +40,9 @@ const { deleteNote } = useDeleteNoteMutation();
           </button>
         </div>
       </div>
+    </div>
+    <div v-if="!notes?.length" class="flex items-center justify-center py-6">
+      <p>{{ t("page.cupping.empty") }}</p>
     </div>
   </Container>
 </template>

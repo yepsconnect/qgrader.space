@@ -1,22 +1,16 @@
 export default defineQuery(() => {
   const { token } = useTokenQuery();
 
-  const filter = reactive({
-    limit: 10,
-    offset: 0,
-  });
-
   const { data: notes, ...rest } = useQuery({
-    key: ["notes", filter],
+    key: ["notes"],
     query: () => {
       return $fetch<Note[]>("/api/notes", {
         method: "GET",
-        params: filter,
         headers: { Authorization: token.value! },
       });
     },
     enabled: () => !!token.value,
   });
 
-  return { filter, notes, ...rest };
+  return { notes, ...rest };
 });

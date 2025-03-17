@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@pinia/colada-nuxt",
     "@pinia/nuxt",
     "nuxt-mongoose",
+    "@nuxtjs/google-fonts",
   ],
   i18n: {
     locales: [{ code: "en", file: "ru.yaml" }],
@@ -21,5 +22,5 @@ export default defineNuxtConfig({
   },
 
   mongoose: { uri: process.env.DB_URI },
-  compatibilityDate: "2025-03-16",
+  googleFonts: { families: { Raleway: true } },
 });
